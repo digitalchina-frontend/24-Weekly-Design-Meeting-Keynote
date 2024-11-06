@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode", // Prettier 插件
+    "ms-vscode.vscode-typescript", // TypeScript 插件
+    "eamodio.gitlens", // GitLens 插件
+    "ahmadawais.emoji-log-vscode" // Emoji Log 插件
+  ],
+  "unwantedRecommendations": [
+    "some.unwanted-extension" // 如果有不想推荐的插件可以列在这里
+  ]
+}

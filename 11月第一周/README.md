@@ -2,10 +2,15 @@
 
 > Where there is a will, there is a way.
 
+## 关于 效率
+
+[anything-llm](https://github.com/Mintplex-Labs/anything-llm) 绝大部分代码是 2个人 在一年内完成的. 那么他们的研发效率和我们的区别在哪里?
+
 ## 关于 模块化设计
 
 - 模块化 一般认为是 UI 组件的模块化, 或者把 UI 组件和 与UI组件的逻辑 通过 hook 封装后 聚合在一起
 - 但是 模块化 也可以是一个功能的模块化, 例如 在 聊天的过程中 因为权限的更新需要切换到 登陆页面.
+- 模块化是一个泛化的概念, 简单来说就是分而治之的思想, 但是就像你去理解一个递归算法一样, 理解一个小问题如何解决是很简单的, 但是理解每个小问题解决了为什么大问题就迎刃而解了并不是那么简单.
 
 ## 关于 关于抽象与具体, High Level Design 与 Low Level Design
 
@@ -17,3 +22,40 @@
 ## 关于 [opendatalab](https://opendatalab.com/)
 
 ## 关于 迭代 从最小闭环 (包括后端) 做起
+
+## 便于方便 Code Review 的代码提交规范
+
+> 站在 `reviewer` 的角度 思考 你提交的代码是 一个好理解的故事 还是一个难以理解的故事
+
+- 明确代码提交的目的 Why
+  - 分支命名
+    - 迭代名称
+    - 功能名称
+      - 如果是和 JIRA 有关的任务, 可以使用 JIRA 的故事号作为分支名
+      - 否则可以使用 自定义 功能名作为分支
+
+- 明确代码提交的内容 What
+
+  > 标准的格式
+
+  - Conventional Commits
+  - Emoji Commit
+
+- 明确一步步实现功能 How
+  - 单一职责 单一功能
+    每一个提交完成一个功能
+  - 代码风格
+    - UI 开发的规范
+    - State 开发的规范
+    - 跨组件 开发的规范
+
+- 范例
+
+```bash
+# 分支名 : sprint-31-story-5496 | sprint-31-feature-xxx
+# 提交信息 : feat: add a new feature
+# 提交内容 :
+# 1. add a new feature
+# 2. add a new feature
+# 3. add a new feature
+```
